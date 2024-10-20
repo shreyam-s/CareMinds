@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/MindCare.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/MindCare.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/MindCare.png" />
+    <link rel="manifest" href="/images/MindCare.png" />
+    <link rel="mask-icon" href="/images/MindCare.png" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="/CSS/mood-map.css" rel="stylesheet" type="text/css" />
+    <title>CareMinds-MoodMap</title>
+    <script defer src="/FunScript/face-api.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="game-header">
+      <a href="/index.html"><img src="/images/MindCare.png" alt="CareMinds" width="100"/></a>
+    </div>
+
+    <div class="header">
+      <p class="heading">Mood Map</p>
+      <p class="description">
+        Create a Mood Map to know your mood and see how it affects your health. In Mood Map your mood will be detected
+        from real time video feed. You can also take a snapshot of your Mood Map and share it with your friends or in
+        social media. Please turn on your camera and generate mood map. Stay in front of a bright light source so our
+        algorithm can detect your gender and age perfectly. Hold still your face to get accurate result. Multiple
+        persons can use this at the same time.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="videoFeed">
+        <p class="canvas-heading">Live Feed From Your Camera</p>
+        <video id="myVidPlayer" width="640" height="480" muted autoplay></video>
+        <button onclick="snapshot()">Create Mood Map</button>
+      </div>
+      <div class="mycanvas">
+        <p class="canvas-heading">Generated Mood Map</p>
+        <div id="snapshot" class="hidden">
+          <canvas id="firstCanvas"></canvas>
+        </div>
+        <button type="button" id="btnDisplay">Download A Snapshot</button>
+      </div>
+    </div>
+    <button class="back-btn"><a href="./games.html">Go Back</a></button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"
+      integrity="sha512-OqcrADJLG261FZjar4Z6c4CfLqd861A3yPNMb+vRQ2JwzFT49WT4lozrh3bcKxHxtDTgNiqgYbEUStzvZQRfgQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/10/07/20241010074722-QYAU55QF.js"></script>
+    
+    <script defer src="/FunScript/mood.js"></script>
+    <script src="https://kit.fontawesome.com/c5e967ea66.js" crossorigin="anonymous"></script>
+    
+    <footer>
+      <div class="footer-container">
+        <!--logo and info column-->
+        <div class="col">
+          <!--logo insert-->
+          <img src="/images/MindCare.png" alt="logo" class="footlogo" />
+          <div class="footercontent">
+            <p class="footerpara">Wellness website</p>
+          </div>
+        </div>
+  
+        <!--ADDRESS COLUMN-->
+  
+        <div class="footer-side-col">
+          <div class="col">
+            <h3>
+              ADDRESS
+              <div class="underline"><span></span></div>
+            </h3>
+            <p>New Delhi,India</p>
+            <p class="email-id"><a href="#">careminds@gmail.com</a></p>
+          </div>
+  
+          <!--HOME COLUMN-->
+  
+          <div class="col">
+            <h3>HOME</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li>
+                <a href="#">Code Of Conduct</a>
+              </li>
+              <li>
+                <a href="#">Contribute</a>
+              </li>
+              <li>
+                <a href="#">Donate</a>
+              </li>
+            </ul>
+          </div>
+          <!--OUR SERVICES COLUMN-->
+          <div class="col">
+            <h3>
+              SERVICES
+              <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+              <li>
+                <a href="/therapy/spritiual.html">Spiritual therapy</a>
+              </li>
+              <li>
+                <a href="/therapy/yoga.html">Yoga Therapy</a>
+              </li>
+              <li>
+                <a href="/therapy/laugh.html">Laughter therapy</a>
+              </li>
+              <li>
+                <a href="/therapy/read.html">Read therapy</a>
+              </li>
+              <li>
+                <a href="/therapy/auido.html">Audio therapy</a>
+              </li>
+              <li><a href="/chat-bot/index.html">Chatbot</a></li>
+            </ul>
+          </div>
+          <!--CONTACTS COLUMN-->
+          <div class="col">
+            <h3>
+              CONTACTS
+              <div class="underline"><span></span></div>
+            </h3>
+            <div class="social-menu">
+              <ul>
+                <a href="https://x.com/___ishreyam" target="_blank">
+                  <li id="social-twitter"><i class="fab fa-2x fa-twitter"></i></li>
+                </a>
+                <a href="https://github.com/shreyam-s" target="_blank">
+                  <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+                </a>
+                <a href="https://www.linkedin.com/in/shreyam-singhal-a1422a22b/" target="_blank">
+                  <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>

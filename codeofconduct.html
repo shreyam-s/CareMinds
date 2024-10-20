@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CareMinds - Code of Conduct</title>
+    <link rel="shortcut icon" href="images/MindCare.png" type="image/x-icon">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(49, 128, 189);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgb(183, 217, 243);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #0066cc;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.code-of-conduct h2 {
+    font-size: 1.8em;
+    color: #0066cc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.code-of-conduct p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer p {
+    margin-top: 10px;
+}
+.footer-container {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: rgb(6, 16, 37);
+}
+
+.footer-side-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+}
+
+.footer-side-col>.col {
+  padding: 2.5rem;
+  flex-wrap: nowrap;
+}
+
+.footer-container>.col {
+  padding: 2.5rem;
+  flex-basis: 20%;
+  color: white;
+}
+
+.footer-container .col a:hover,
+footer a:focus {
+  color: cyan;
+}
+
+@media (max-width: 500px) {
+  .accordion__title {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  .accordion__content {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 447px) {
+  .accordion__title {
+    font-size: 1em;
+  }
+
+  .accordion__content {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 393px) {
+  .accordion__title {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1120px) {
+  .footer-side-col {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 730px) {
+  .footer-container {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-container .col {
+    padding: 2rem;
+    flex-basis: 31%;
+  }
+
+  .footer-container p {
+    color: white;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-side-col {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, auto);
+  }
+
+  .footer-container .col {
+    padding: 1rem;
+    flex-basis: 100%;
+  }
+}
+
+.footer-container .col a {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.footer-container .col ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: cyan;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.footer-container .col ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.footer-container p {
+  color: white;
+}
+
+.footer-container .col ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: cyan;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.footer-container .col ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.footer-container p {
+  margin-top: 0.5rem;
+}
+
+.footerpara {
+  margin-left: -10px;
+}
+
+.footer-container .col .email-id {
+  word-wrap: break-word;
+  text-decoration: underline;
+}
+
+.email-id a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-container .col h3 {
+  color: rgb(228, 26, 77);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.footer-container .col img {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  cursor: pointer;
+}
+
+.footer-container .col .footerheading {
+  display: flex;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer-container .col .footerpara {
+  display: flex;
+  margin-top: -3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 4px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fab:hover {
+  text-decoration: none;
+}
+
+.footer-container .col .sukoon {
+  color: rgb(30, 240, 191);
+  letter-spacing: 5px;
+}
+
+.footer-container .col .social-menu ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-container .col .social-menu ul a {
+  color: white;
+}
+
+
+.footer-container .col ul li {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.footer-container .col .social-menu ul a li{
+  transition: transform  250ms ease-out, color 250ms ease-out;
+}
+
+
+.footer-container .col .social-menu ul a li:hover {
+  transform: scale(1.4) !important;
+  text-decoration: none !important;
+}
+.footer-container .col .social-menu ul a li#social-twitter:hover{
+  color: 	#1DA1F2;
+}
+.footer-container .col .social-menu ul a li#social-github{
+  transition: transform  250ms ease-out, color 250ms ease-out, padding 250ms ease-out !important;
+}
+.footer-container .col .social-menu ul a li#social-github:hover{
+  transform: scale(1.2) !important;
+  color:black;
+  background-color: whitesmoke;
+  padding: 2px 2px 0px 2px;
+  border-radius: 25px;
+}
+.footer-container .col .social-menu ul a li#social-linkedin:hover{
+  color: #0A66C2;
+}
+
+.footer-container .col ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .box {
+    place-items: center;
+    padding: 3rem 0px;
+  }
+
+  #about h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #about h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .card img {
+    border-radius: 50%;
+  }
+
+  #services h2 {
+    text-align: center;
+  }
+
+  #services .responsive {
+    margin-top: 28px;
+  }
+
+  .footer-container .col ul li {
+    text-align: center;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .footer-container .col .social-menu ul {
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger i {
+    z-index: 1000000000;
+    display: block;
+    font-size: 25px;
+  }
+}
+
+.footercontent {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .menu.open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 880px) and (min-width: 700px) {
+  #about h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>CareMinds Code of Conduct</h1>
+            <p>At CareMinds, we are dedicated to fostering a compassionate, supportive, and safe environment for all users. Our community values openness, empathy, and respect for every individual. To ensure a positive experience for everyone, we ask all participants to adhere to the following guidelines:</p>
+        </header>
+        <section class="code-of-conduct">
+            <h2>1. Respectful Communication</h2>
+            <p>Be kind, considerate, and respectful in your interactions with others. Avoid offensive, harmful, or demeaning language, including hate speech, discriminatory remarks, or bullying of any kind. Respect differing opinions and experiences.</p>
+
+            <h2>2. Confidentiality</h2>
+            <p>Do not share private or personal information about others without consent. Respect the privacy of all community members. Avoid discussing sensitive topics in a manner that could expose someone's identity without their permission.</p>
+
+            <h2>3. Non-Professional Advice</h2>
+            <p>CareMinds is a platform for mental health support, not professional therapy or diagnosis. Refrain from offering medical advice unless you are a licensed mental health professional. Encourage others to seek help from certified professionals when necessary.</p>
+
+            <h2>4. Supportive Environment</h2>
+            <p>Offer encouragement and empathy to others who may be struggling with mental health challenges. Avoid judgmental or dismissive comments. Refrain from glorifying or promoting harmful behaviors (e.g., self-harm, substance abuse).</p>
+
+            <h2>5. Harassment and Abuse</h2>
+            <p>Harassment, stalking, threats, or any form of abuse will not be tolerated. If you feel unsafe or witness inappropriate behavior, please report it to the CareMinds team immediately.</p>
+
+            <h2>6. Trigger Warnings</h2>
+            <p>Use trigger warnings for discussions involving sensitive topics such as trauma, self-harm, or suicide. Respect the emotional boundaries of others and avoid graphic descriptions of harmful behaviors.</p>
+
+            <h2>7. No Promotion of Harmful Content</h2>
+            <p>Do not share content that promotes self-harm, eating disorders, or other dangerous behaviors. Content that glorifies or normalizes harmful actions is strictly prohibited.</p>
+
+            <h2>8. Reporting Violations</h2>
+            <p>If you observe any behavior that violates this Code of Conduct, please notify us via our reporting system. All reports will be handled with confidentiality and care.</p>
+        </section>
+    </div>
+     <footer>
+            <div class="footer-container">
+                <div class="col">
+                    <img src="/images/MindCare.png" alt="logo" class="footlogo" />
+                    <div class="footercontent">
+                        <p class="footerpara">Wellness website</p>
+                    </div>
+                </div>
+                <div class="footer-side-col">
+                    <div class="col">
+                        <h3>
+                            ADDRESS
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <p>New Delhi,India</p>
+                        <p class="email-id"><a href="#">careminds@gmail.com</a></p>
+                    </div>
+
+                    <div class="col">
+                        <h3>HOME</h3>
+                        <ul>
+                            <li>
+                                <a href="#about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="codeofconduct.html">Code Of Conduct</a>
+                            </li>
+                            <li>
+                                <a href="#">Contribute</a>
+                            </li>
+                            <li>
+                                <a href="#">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h3>
+                            SERVICES
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="/therapy/spritiual.html">Spiritual therapy</a>
+                            </li>
+                            <li>
+                                <a href="/therapy/yoga.html">Yoga Therapy</a>
+                            </li>
+                            <li>
+                                <a href="/therapy/laugh.html">Laughter therapy</a>
+                            </li>
+                            <li>
+                            <a href="/therapy/read.html">Read therapy</a>
+                            </li>
+                            <li>
+                                <a href="/therapy/auido.html">Audio therapy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h3>
+                            CONTACTS
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <div class="social-menu">
+                            <ul>
+                                <a href="https://x.com/___ishreyam" target="_blank">
+                                    <li id="social-twitter"><i class="fab fa-2x fa-twitter"></i></li>
+                                </a>
+                                <a href="https://github.com/shreyam-s" target="_blank">
+                                    <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+                                </a>
+                                <a href="https://www.linkedin.com/in/shreyam-singhal-a1422a22b/" target="_blank">
+                                    <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/10/07/20241010074722-QYAU55QF.js"></script>
+        
+</body>
+</html>
