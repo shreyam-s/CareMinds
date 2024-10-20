@@ -1,6 +1,6 @@
 ## ⭐ CareMinds ⭐
 
-Parallax Website is a visually stunning web project built using HTML and CSS. It is a beautiful and functional website that utilizes the parallax scrolling effect to create an immersive and engaging user experience.
+CareMinds is a platform dedicated to promoting mental well-being. Our goal is to help people stay happy, reduce stress, and manage depression and anxiety through supportive content, tools, and resources.
 
 
 
