@@ -12,6 +12,7 @@ CareMinds is a platform dedicated to promoting mental well-being. Our goal is to
 
 [![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)](https://github.com/Shreyam-S)&nbsp;
 [![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)](https://github.com/Shreyam-S)&nbsp; 
+
 <br>
 
 ## 📬 Connect With Me
